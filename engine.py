@@ -137,5 +137,8 @@ def save_alerts(alerts):
         if cursor is not None:
             cursor.close()
         connection.close()
-
+     finally:
+        if cursor is not None:
+            cursor.close()
+        connection.close()
 
