@@ -1,13 +1,9 @@
 
 import sys
 from pathlib import Path
-
 BACKEND_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(BACKEND_DIR))
-
 from database.connection import get_connection
-
-
 def save_audit_results(results):
     """Save security audit findings to MariaDB."""
     if not results:
