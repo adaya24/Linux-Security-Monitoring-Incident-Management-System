@@ -27,7 +27,6 @@ def home():
         "status": "online"
     }
 
-
 @app.get("/processes")
 def list_processes():
     return get_processes()
