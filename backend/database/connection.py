@@ -15,3 +15,4 @@ def get_connection():
         password=os.environ["DB_PASSWORD"],
         database=os.environ["DB_NAME"],
     )
+# implement MySQL database connection 
