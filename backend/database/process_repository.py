@@ -38,8 +38,8 @@ def save_process_snapshot(processes):
     except Exception:
         connection.rollback()
         raise
-# handle database operations 
+
     finally:
         cursor.close()
         connection.close()
-
+# handle database operations 
