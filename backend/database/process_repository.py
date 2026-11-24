@@ -1,4 +1,7 @@
+
 from database.connection import get_connection
+
+
 def save_process_snapshot(processes):
     """Save a list of process snapshots to MariaDB."""
     if not processes:
@@ -14,6 +17,7 @@ def save_process_snapshot(processes):
             (pid, process_name, username, status, cpu_percent, memory_mb)
             VALUES (%s, %s, %s, %s, %s, %s)
         """
+
         values = [
             (
                 process["pid"],
@@ -38,3 +42,4 @@ def save_process_snapshot(processes):
     finally:
         cursor.close()
         connection.close()
+
