@@ -64,4 +64,4 @@ if __name__ == "__main__":
             f"{process['cpu_percent']:<10.2f}"
             f"{process['memory_mb']:<12.2f}"
         )
-
+# monitor running processes 
